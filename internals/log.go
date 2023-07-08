@@ -5,6 +5,7 @@ import (
 	"os"
 )
 
+// Fatal prints the error and exits with status 1
 func Fatal(err error) {
 	if err != nil {
 		fmt.Println(err)
@@ -12,6 +13,7 @@ func Fatal(err error) {
 	}
 }
 
+// Warn prints the error
 func Warn(err error) {
 	if err != nil {
 		fmt.Println(err)
