@@ -12,6 +12,6 @@ import (
 var version string = "UNSET"
 
 func main() {
-	fmt.Println("TGET " + version)
+	fmt.Println("tget " + version)
 	cmd.Execute()
 }
