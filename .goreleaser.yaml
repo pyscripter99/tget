@@ -23,6 +23,9 @@ archives:
     format_overrides:
     - goos: windows
       format: zip
+    files:
+      - LICENSE
+      - README.md
 snapshot:
   name_template: "{{ .Version }}"
 changelog:
