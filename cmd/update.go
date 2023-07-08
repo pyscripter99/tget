@@ -21,8 +21,6 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var version string = "UNSET"
-
 type GithubReleaseAsset struct {
 	Name                 string `json:"name"`
 	Size                 int    `json:"size"`
@@ -58,10 +56,6 @@ var updateCmd = &cobra.Command{
 		}
 
 		fmt.Println("Latest: " + release.Tag_name)
-		fmt.Println("Current: v" + version)
-		if release.Tag_name == "v"+version {
-			internals.Fatal(fmt.Errorf("already up to date"))
-		}
 		published, err := time.Parse(time.RFC3339, release.Published_at)
 		if err != nil {
 			internals.Fatal(err)
