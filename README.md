@@ -3,7 +3,7 @@ Tget is a golang implementation of wget. It is a simple tool to download files f
 
 ## Usage
 ```
-tget url [output] [flags]
+tget -u url [flags]
 ```
 
 ## Building
